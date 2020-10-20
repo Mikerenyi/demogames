@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,400&display=swap');
+
+        html {
+            overflow: auto;
+            background-color: #ECECEC;
+        }
+
+        html,
+        body,
+        div,
+        iframe {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            border: none;
+            color: red;
+            scrolling ="no";
+        }
+
+        iframe {
+            display: block;
+            width: 100%;
+            border: none;
+            overflow:hidden;
+        }
+
+        /* Dropdown Button */
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+            /* Dropdown button on hover & focus */
+            .dropbtn:hover, .dropbtn:focus {
+                background-color: #2980B9;
+            }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: absolute;
+            display: block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-image: linear-gradient(red,#BA0745);
+            //background-color: #BA0745;
+            width: 110%;
+            height: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            color: #D1D1D1;
+            font-family: 'Jost', sans-serif;
+            font-size: 1rem;
+        }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                /* Change color of dropdown links on hover */
+                .dropdown-content a:hover {
+                    background-color: #ddd
+                }
+
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {
+            display: block;
+        }
+
+        button {
+            border: 0;
+            border-radius: .25rem;
+            background-image: linear-gradient(to right, #00627A, #1E88E5);
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            color: white;
+            font-family: 'Jost', sans-serif;
+            font-size: 1rem;
+            line-height: 1.2;
+            white-space: nowrap;
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            margin: 0.25rem;
+            cursor: pointer;
+        }
+
+
+            button:hover,
+            button:focus {
+                background: #0053ba;
+                transform: scale(1.1);
+            }
+
+            button:focus {
+                outline: 1px solid #fff;
+                outline-offset: -4px;
+            }
+
+            button:active {
+                transform: scale(0.99);
+            }
+    </style>
+
+    <script>/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+
+        window.onload = Refresh;
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+
+        }
+
+        function Refresh() {
+            document.getElementById('iframeId').src = "Startpage/blankstory.html";
+
+            document.getElementById("myDropdown").classList.add("show");
+            //document.getElementById('iframeid').src = document.getElementById('iframeid').src
+            //document.getElementById('iframeid').contentWindow.location.reload();
+            //window.location.reload();
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        function changeSrc(loc) {
+            document.getElementById('iframeId').src = loc;
+
+        }</script>
+    <center>
+        <button onclick="changeSrc('Demo/Story/story.html')">"PARTY INVITE" (Choice-Based Story)</button>
+        <button onclick="changeSrc('Demo/Catfight/cat.html')">"CATFIGHT" (Turn-Based Combat Game)</button>
+        <button onclick="changeSrc('Demo/Bomb/bomb.html')">"TICKING CLOCK" (Bomb Puzzle Game)</button>
+    </center>
+
+
+</head>
+<body>
+    <iframe id="iframeId" src="Startpage/blankstory.html"
+            frameborder="0"
+            position: absolute;
+            marginheight="0"
+            marginwidth="0"
+            width="100%"
+            height="100%"
+            scrolling="auto"></iframe>
+</body>
+</html>

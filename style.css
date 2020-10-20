@@ -1,0 +1,196 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+body {
+  background-color: black;
+  margin-right: auto;
+  margin-left:  auto;
+  max-width: 960px;
+  padding-right: 10px;
+  padding-left:  10px;
+}
+
+Centercontainer{
+    text-align: center
+  
+  }
+
+h1 {
+  font-family: 'Jost', sans-serif;
+  color: white;
+
+       font-size:.5rem;
+}
+
+h2 {
+  font-family: 'Jost', sans-serif;
+  color: white;
+        text-align: center;
+       font-size: .5rem;
+}
+p {
+  font-family: 'Jost', sans-serif;
+  color: white;
+   
+        font-size: .5rem;
+
+}
+
+html {
+    overflow: auto;
+}
+
+html,
+body,
+div,
+iframe {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    border: none;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    border: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+button {
+  border: 0;
+  border-radius: .25rem;
+  background: #1E88E5;
+  color: white;
+  font-family: 'Jost', sans-serif;
+  font-size: .8rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  margin: 0.25rem;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background: #0053ba;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+/* A link that has not been visited */
+a:link {
+    color: #ffff66;
+}
+/* A link that has been visited */
+a:visited {
+    color: #cc00cc	;
+}
+/* A link that is hovered on */
+a:hover {
+    color: #ffffcc;
+}
+
+imgcenter {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul li {
+  color: white;
+          font-size: 1rem;
+  font-family: 'Jost', sans-serif;
+  /* set color of list item text */
+  display: block;
+  list-style: none; 
+  margin: 0 0 16px 1.1225em;
+  /* Give the bullet room on the left hand side */
+  padding: 0;
+  position: relative;
+}
+
+ ul li::before {
+  color: white;
+  /* color of bullet or square */
+  content: "\2022"; 
+  /* Unicode of character to precede the list item */
+  display: inline-block;
+  font-size: 2em; 
+  /* use em or % */ 
+  left: -1.2em; 
+  /* use em, line up bullet flush with left hand side */
+  position: absolute;
+  /* Set the bullet positioned absolutely top left */
+  top: -.2em; 
+  /* use em or % */
+}
+
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 200%; /* 4:3 Aspect Ratio */
+}
+
+.btn-group button {
+    border: 0;
+    border-radius: .25rem;
+    background: #1E88E5;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-size: .6rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    margin: 0.25rem;
+    cursor: pointer;
+
+}
+.header {
+top: 40px;
+    position: fixed;
+    z-index: 999;
+    
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #0053ba;
+}
+
+
+
